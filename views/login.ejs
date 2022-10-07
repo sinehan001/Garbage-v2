@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<div class="login-box">
+  <h2>Login</h2>
+  <form action="/login" method="POST">
+    <div class="user-box">
+      <input type="text" name="username" required="" placeholder="Username">
+    </div>
+    <div class="user-box">
+      <hr>
+      <input type="password" name="password" required="" placeholder="Password">
+    </div>
+    <div class="centered">
+      <button type="submit" class="btn btn-light btn-lg">Login</button>
+    </div>
+  </form>
+  <div class="centered">
+    <span style="color: white;">New User? </span><a href="/register">Register</a>
+  </div>
+</div>
+
+
+<%- include('partials/footer') %>

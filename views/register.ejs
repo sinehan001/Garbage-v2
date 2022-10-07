@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="login-box">
+  <hr>
+  <h2>SignUp</h2>
+  <div class="alert alert-danger alert-dismissible fade show" style="display: none;">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Username already Available!</strong> Try with other username.
+  </div>
+  <form action="/register" method="POST">
+    <div class="user-box">
+      <input type="email" name="username" required="" placeholder="Username">
+    </div>
+    <div class="user-box">
+      <hr>
+      <input type="password" name="password" required="" placeholder="Password">
+    </div>
+    <div class="centered">
+      <button type="submit" class="btn btn-light btn-lg">Register</button>
+    </div>
+  </form>
+  <div class="centered">
+    <span style="color: white;">Already an User? </span><a href="/login">Login</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

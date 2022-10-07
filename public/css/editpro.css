@@ -1,0 +1,203 @@
+body 
+{
+    font-family: sans-serif;
+}
+.animate-label {
+    position: relative;
+    margin: 35px 0px 40px 0px;
+}
+    label {
+        font-family: cursive;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        transition: .3s all ease;
+        font-size: 18px;
+        width: 100%;
+        color: #888888;
+        font-weight: bold;
+    }
+    input:valid + label, input:focus + label {
+      bottom: 30px;
+      font-size: 18px;
+      color: #4285f4;
+    }
+    input:focus + label{
+      color: #4285f4;
+    }
+    line:before{
+      content: '';
+      position: absolute;
+      background: gray;
+      /* width: 0px;
+      height: 3px;
+      right: 50%;
+      bottom: 0; */
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+    }
+
+    input:valid ~ line:before 
+    {
+        height: 3px;
+        width: 100%;
+        background-color: #4285f4;
+        right: 0;
+    }
+
+    input:focus ~ line:before{
+    height: 3px;
+    width: 100%;
+    right: 0;
+    transition: all .3s ease;
+    }
+
+    input{
+        width: 100%;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        padding-bottom: 6px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    input:focus
+    {
+        outline: none;
+    }
+
+    .head 
+    {
+      text-align: center;
+    }
+
+    .form-wrap
+    {
+      width: 450px;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    form 
+    {
+      margin-bottom: 30px;
+    }
+
+    .submitBtn
+    {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .submitBtn input
+    {
+      width: 150px;
+      background-color: #4285f4;
+      color: white;
+      padding: 10px 10px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    ::-webkit-inner-spin-button
+    {
+      display: none;
+    }
+
+    @media (max-width: 500px)
+    {
+      .form-wrap
+      {
+        width: 300px;
+      }
+    }
+
+    @media (max-width: 300px)
+    {
+      .form-wrap
+      {
+        width: 200px;
+      }
+    }
+
+    .back{
+      width: auto;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      color: black;
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    #imageUpload
+    {
+      display: none;
+    }
+
+    .avatar-upload {
+      position: relative;
+      max-width: 205px;
+      margin: 0px auto 60px auto;
+    }
+    .avatar-edit {
+      position: absolute;
+      right: 12px;
+      z-index: 1;
+      top: 10px;
+    }
+    .avatar-edit label {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      margin-bottom: -60px;
+      margin-left: -60px;
+      border-radius: 100%;
+      background: #303134;
+      border: 1px solid transparent;
+      box-shadow: 0px 0px 4px 0px black;
+      cursor: pointer;
+      font-weight: normal;
+      transition: all .2s ease-in-out;
+    }
+    .avatar-edit label:after {
+        content: "\f030";
+        font-family: 'FontAwesome';
+        color: white;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        right: 0;
+        text-align: center;
+        margin: auto;
+    }
+    .avatar-preview {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        display: table;
+        margin: 0 auto;
+        border-radius: 100%;
+        border: 2px solid #F8F8F8;
+        box-shadow: 0px 0px 4px 0px black;
+    }
+    .avatar-preview > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .container-view {
+        padding-bottom: 28px;
+    }
+    input[type='submit']:hover {
+        transform: scale(0.96);
+    }

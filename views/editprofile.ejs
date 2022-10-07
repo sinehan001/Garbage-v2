@@ -1,0 +1,70 @@
+<%- include('partials/header1') %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/editpro.css" />
+    <div class="head">
+        <h2>Edit Profile</h2>
+    </div>
+    <div class="form-wrap">
+    <div class="container-view">
+    <div class="avatar-upload">
+    <form method="POST" id="formimg" action='update.php' enctype="multipart/form-data">
+        <div class="avatar-edit">
+            <input type='file' name="image" onchange="mserver()" id="imageUpload" accept=".png, .jpg, .jpeg" />
+            <label for="imageUpload"></label>
+        </div>
+    </form>
+        <div class="avatar-preview">
+            <div id="imagePreview" style="background-image: url('<%= img %>');">
+            </div>
+        </div>
+    </div>
+    <form method="POST" action='' enctype="multipart/form-data">
+        <div class="animate-label">
+            <input type="email" id="email" name="email" onchange="run()" value="johndoe1971@gmail.com" required/>
+            <label for="email"> Email Id </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="text" id="username" name="uname" value="John Doe" required/>
+            <label for="username"> Username </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="text" id="fname" name="fname" value="Fname" required/>
+            <label for="username"> First Name </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="text" id="lname" name="lname" value="Lname" required/>
+            <label for="lname"> Last Name </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="number" id="number" name="phone" value="987654321" required/>
+            <label for="number"> Phone Number </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="text" id="address" name="address" value="address" required/>
+            <label for="address"> Address </label>
+            <line></line>
+        </div>
+        <div class="animate-label">
+            <input type="text" id="bio" name="bio" onkeyup="count(this)" value="bio" maxlength="60" required/>
+            <label for="bio"> About Me </label>
+            <line></line>
+        </div>
+        <p id="char" align="right"></p>
+        <br />
+        <div class="submitBtn">
+            <input type="submit" name="submit" value="submit" onclick="mob()">
+        </div>
+        </form>
+</div>
+    </div>
+    <br />
+    <br />
+    <script src="js/editpro.js"></script>
+
+<%- include('partials/footer1') %>
